@@ -8,7 +8,7 @@ function addProduct() {
   let input = document.getElementById("product").value;
   // You will need to create a div using javascript,
   // Use this site to help you understand how: https://www.w3schools.com/jsref/met_document_createelement.asp
-  let diva = document.createElement("div");
+  let div = document.createElement("div");
   // Once you create create a div,
   // you will need to get the output using the same method you did for the input
   // Except you do not need to include the value at the end.
@@ -22,7 +22,7 @@ function addProduct() {
   // do not forget to include a return false at the end to not reload your webpage.
   if (input === "") {
     alert("Put in a product name");
-    false;
+    return false;
   }
   // Assignment 2:
   // You need to put the value of the input into an array to call later.
@@ -34,25 +34,30 @@ function addProduct() {
   // Please look up how to use push on an array here: https://www.w3schools.com/jsref/jsref_push.asp
   // use console.log and pass in the product array to check if you have it setup correctly.
   // console.log(productArray)
-  console.log(productArray);
+  newProduct.push;
+  {
+    console.log(productArray);
+  }
   // Assignment 3:
   // Hint: Use a loop(look up the javascript loop on w3schools.) on your product array and set the max length of the loop to the array using
   // dot notation (array.length) and then you do the following:
-  for (productArray.length === 4; input === ""; ) {
-    document.getElementById().value === "";
-  }
-  // set the input to empty, similar how you would check in the if statement previously,
-  // just get document.getelementbyid then set the .value to an empty string.
+  for (
+    productArray.length <= 4;
+    // set the input to empty, similar how you would check in the if statement previously,
+    // just get document.getelementbyid then set the .value to an empty string.
+    (document.getElementById("product").value = "");
 
-  // then set the output div to display block, its normally set to none, which means invisible
-  // This means that you need to get your output variable use dot notation to set style.display = "block"
-  output.style.display = "block";
+  )
+    // then set the output div to display block, its normally set to none, which means invisible
+    // This means that you need to get your output variable use dot notation to set style.display = "block"
+    document.getElementById("output").style.display = "block";
   // set the div.textContent equal to the the array index number [i] and dot notation of the product
   // `${productArray[i].your input}`
-  diva.textContent = `(${productArray[4]}input)`;
+  document.getElementById("output").textContent ===
+    `${productArray[4]} ${input}`;
   // finally use the appendChild method from the output variable you had from earlier.
   // output.appendChild(yourdivnamehere)
-  output.appendChild(diva);
+  output.appendChild(div);
   // this line is to prevent the webpage from reloading. DO NOT MODIFY IT.
   return false;
 }
