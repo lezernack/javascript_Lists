@@ -28,7 +28,7 @@ function addProduct() {
   // You need to put the value of the input into an array to call later.
   // That means you will need to assign your input using brackets around it
   // to a newProduct variable, remember that assign can mean the equals sign(=).
-  let newProduct = input;
+  let newProduct = [input];
   // Hint: You could push your product to a new array once you create a new variable
   // that makes a single object {} with the product variable you made above.
   // Please look up how to use push on an array here: https://www.w3schools.com/jsref/jsref_push.asp
@@ -38,23 +38,20 @@ function addProduct() {
 
   console.log(productArray);
 
-  let i = 0;
-
   // Assignment 3:
   // Hint: Use a loop(look up the javascript loop on w3schools.) on your product array and set the max length of the loop to the array using
   // dot notation (array.length) and then you do the following:
-  while (i <= productArray.length) {
+  for (let i = 0; i < productArray.length; i++) {
     // set the input to empty, similar how you would check in the if statement previously,
     // just get document.getelementbyid then set the .value to an empty string.
+    input = "";
     document.getElementById("product").value = "";
-
     // then set the output div to display block, its normally set to none, which means invisible
     // This means that you need to get your output variable use dot notation to set style.display = "block"
     document.getElementById("output").style.display = "block";
     // set the div.textContent equal to the the array index number [i] and dot notation of the product
     // `${productArray[i].your input}`
-    div.textContent = productArray[i].input;
-    // finally use the appendChild method from the output variable you had from earlier.
+    document.getElementById("output").textContent = productArray[i];
     // output.appendChild(yourdivnamehere)
     output.appendChild(div);
     // this line is to prevent the webpage from reloading. DO NOT MODIFY IT.
