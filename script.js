@@ -12,7 +12,7 @@ function addProduct() {
   // Once you create create a div,
   // you will need to get the output using the same method you did for the input
   // Except you do not need to include the value at the end.
-  let output = document.getElementById("product");
+  let output = document.getElementById("output");
   // CHALLENGE SECTION:
   // If you feel up for a challenge, try and use an if statement if(condition){run this code}
   // to return an alert if the input is empty. You will need to get the id as in previous assignments above
@@ -48,10 +48,10 @@ function addProduct() {
     document.getElementById("product").value = "";
     // then set the output div to display block, its normally set to none, which means invisible
     // This means that you need to get your output variable use dot notation to set style.display = "block"
-    document.getElementById("output").style.display = "block";
+    output.style.display = "block";
     // set the div.textContent equal to the the array index number [i] and dot notation of the product
     // `${productArray[i].your input}`
-    document.getElementById("output").textContent = productArray[i];
+    div.textContent = productArray[i];
     // output.appendChild(yourdivnamehere)
     output.appendChild(div);
     // this line is to prevent the webpage from reloading. DO NOT MODIFY IT.
